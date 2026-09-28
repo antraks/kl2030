@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Rimau, la mascotte : un tigre de Malaisie stylisé">
+  <!-- oreilles -->
+  <circle cx="50" cy="52" r="24" fill="#E9832A"/>
+  <circle cx="150" cy="52" r="24" fill="#E9832A"/>
+  <circle cx="50" cy="52" r="11" fill="#3B0D2E"/>
+  <circle cx="150" cy="52" r="11" fill="#3B0D2E"/>
+  <!-- tête -->
+  <ellipse cx="100" cy="112" rx="80" ry="72" fill="#E9832A"/>
+  <!-- rayures -->
+  <path d="M100 40 L91 72 L109 72Z" fill="#3B0D2E"/>
+  <path d="M76 46 L84 74 L68 66Z" fill="#3B0D2E"/>
+  <path d="M124 46 L116 74 L132 66Z" fill="#3B0D2E"/>
+  <path d="M20 98 L50 106 L22 116Z" fill="#3B0D2E"/>
+  <path d="M180 98 L150 106 L178 116Z" fill="#3B0D2E"/>
+  <path d="M26 128 L50 128 L32 140Z" fill="#3B0D2E"/>
+  <path d="M174 128 L150 128 L168 140Z" fill="#3B0D2E"/>
+  <!-- joues -->
+  <ellipse cx="72" cy="146" rx="34" ry="26" fill="#FFF6E8"/>
+  <ellipse cx="128" cy="146" rx="34" ry="26" fill="#FFF6E8"/>
+  <!-- yeux -->
+  <circle cx="72" cy="106" r="10" fill="#3B0D2E"/>
+  <circle cx="128" cy="106" r="10" fill="#3B0D2E"/>
+  <circle cx="75" cy="103" r="3.5" fill="#FFFFFF"/>
+  <circle cx="131" cy="103" r="3.5" fill="#FFFFFF"/>
+  <!-- nez et bouche -->
+  <path d="M87 128 L113 128 L100 142Z" fill="#D42A45"/>
+  <path d="M100 142 Q100 156 86 158 M100 142 Q100 156 114 158" stroke="#3B0D2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- bandeau songket -->
+  <path d="M34 84 Q100 62 166 84 L162 94 Q100 74 38 94Z" fill="#E8B53A"/>
+  <path d="M92 76 L100 70 L108 76 L100 82Z" fill="#D42A45"/>
+</svg>

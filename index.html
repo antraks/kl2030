@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuala Lumpur 2030 — Jeux du Commonwealth (site fictif)</title>
+  <meta name="description" content="Site fictif des Jeux du Commonwealth du centenaire à Kuala Lumpur, du 25 juillet au 5 août 2030.">
+  <link rel="icon" href="assets/embleme.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="accueil">
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <section class="heros">
+      <div class="conteneur">
+        <div>
+          <h1 aria-label="Kuala Lumpur 2030">
+            <span class="h1-kl" aria-hidden="true">KL</span>
+            <span class="h1-an" aria-hidden="true">2030</span>
+          </h1>
+          <p class="heros-dates">25 juillet – 5 août 2030</p>
+          <p class="compte" id="compte" aria-live="off">Cérémonie d'ouverture le 25 juillet 2030 à 20 h.</p>
+          <p class="heros-texte">Cent ans après les premiers Jeux, le Commonwealth se retrouve à Kuala Lumpur : 74 nations et territoires, 20 sports, 12 jours de compétition.</p>
+          <div class="actions">
+            <a class="bouton bouton-or" href="sites.html">Voir les sites de compétition</a>
+            <a class="bouton bouton-contour" href="#centenaire">L'histoire des Jeux</a>
+          </div>
+        </div>
+        <img class="embleme-grand" src="assets/embleme.svg" alt="Emblème de KL 2030 : une fleur d'hibiscus, fleur nationale de la Malaisie">
+      </div>
+    </section>
+    <div class="bande-rebung" aria-hidden="true"></div>
+
+    <section class="section" id="centenaire">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Cent ans de Jeux</h2>
+          <p>Kuala Lumpur a accueilli les premiers Jeux organisés en Asie. Elle reçoit aujourd'hui l'édition du centenaire.</p>
+        </div>
+        <ol class="frise">
+          <li>
+            <span class="frise-annee">1930</span>
+            <p class="frise-lieu">Hamilton, Canada</p>
+            <p>Premiers Jeux de l'Empire britannique : 11 nations, 400 athlètes, 6 sports.</p>
+          </li>
+          <li>
+            <span class="frise-annee">1998</span>
+            <p class="frise-lieu">Kuala Lumpur, Malaisie</p>
+            <p>Premiers Jeux en Asie. Le stade national de Bukit Jalil est inauguré pour l'occasion.</p>
+          </li>
+          <li>
+            <span class="frise-annee">2030</span>
+            <p class="frise-lieu">Kuala Lumpur, Malaisie</p>
+            <p>Les Jeux du centenaire, dans les sites de 1998 rénovés et de nouveaux lieux au cœur de la ville.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="conteneur">
+        <dl class="chiffres">
+          <div><dt>nations et territoires</dt><dd>74</dd></div>
+          <div><dt>sports au programme</dt><dd>20</dd></div>
+          <div><dt>sites de compétition</dt><dd id="nb-sites">16</dd></div>
+          <div><dt>athlètes attendus</dt><dd>5 000</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Les sports</h2>
+          <p>Choisissez un sport pour voir où il se joue.</p>
+        </div>
+        <ul class="sports" id="sports"></ul>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Trois pôles</h2>
+          <p>Tous les sites sont reliés par le métro ou par des navettes gratuites pour les détenteurs de billets.</p>
+        </div>
+        <div class="poles" id="poles"></div>
+        <a class="lien-fort" href="sites.html">Voir tous les sites sur la carte</a>
+      </div>
+    </section>
+
+    <section class="section mascotte">
+      <div class="conteneur">
+        <img src="assets/rimau.svg" alt="Rimau, un tigre stylisé coiffé d'un bandeau doré" width="280" height="280">
+        <div>
+          <h2>Voici Rimau</h2>
+          <p>Rimau est un tigre de Malaisie, l'animal emblème du pays. C'est aussi une espèce en danger : il en resterait moins de 150 à l'état sauvage.</p>
+          <p>Pour chaque billet vendu, un ringgit est reversé à un programme de protection de la forêt où il vit.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied" id="pied"></footer>
+
+  <script src="assets/sites-data.js"></script>
+  <script src="assets/commun.js"></script>
+  <script src="assets/accueil.js"></script>
+</body>
+</html>
