@@ -161,6 +161,21 @@ p { margin: 0 0 1em; max-width: 68ch; }
 
 .embleme-grand { width: min(100%, 420px); justify-self: center; }
 
+.heros-auteurs {
+  border-left: 3px solid var(--emas); padding-left: 14px; margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.heros-auteurs strong { color: var(--blanc); }
+
+/* Slogan en bas de l'accueil */
+.slogan { text-align: center; }
+.slogan-texte {
+  font-family: var(--display); font-weight: 900; line-height: 0.95; margin: 0 auto 20px; max-width: none;
+  font-size: clamp(2rem, 6.5vw, 4.4rem); font-variation-settings: "wdth" 110; color: var(--songket);
+}
+.slogan-texte span { color: var(--bunga); }
+.slogan-local { margin: 0 auto; color: var(--emas-texte); font-size: 1.15rem; font-style: italic; max-width: none; }
+
 /* ---------- Sections ---------- */
 
 .section { padding: clamp(56px, 9vw, 112px) 0; }
