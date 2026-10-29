@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schedule — Kuala Lumpur 2030 (fictional site)</title>
+  <meta name="description" content="The competition schedule of the Kuala Lumpur 2030 Commonwealth Games (fictional site): day by day and sport by sport, from 25 July to 5 August 2030.">
+  <link rel="icon" href="assets/embleme.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="programme">
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <section class="page-tete">
+      <div class="conteneur">
+        <h1>Schedule</h1>
+        <p>Twelve days of competition, from the opening ceremony on 25 July to the closing ceremony on 5 August. Most sports have a morning session from 9 am and an evening session from 6 pm, avoiding the hottest hours of the day.</p>
+        <nav class="actions" aria-label="On this page">
+          <a class="bouton bouton-or" href="#jour">Day by day</a>
+          <a class="bouton bouton-contour" href="#ensemble">At a glance</a>
+        </nav>
+      </div>
+    </section>
+    <div class="bande-rebung" aria-hidden="true"></div>
+
+    <section class="section" id="jour">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Day by day</h2>
+          <p>Choose a day to see its highlights and the sports on the programme.</p>
+        </div>
+        <div class="choix-jours" id="choix-jours" role="group" aria-label="Choose a day"></div>
+        <div class="jour-vue" id="vue-jour" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="ensemble" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>At a glance</h2>
+          <p>Every sport, every day. Choose a date in the table to see that day in detail.</p>
+        </div>
+        <div class="grille-cadre">
+          <table class="grille" id="grille">
+            <caption class="sr-only">Competition schedule by sport and day</caption>
+          </table>
+        </div>
+        <ul class="legende">
+          <li><span class="pastille-seance" aria-hidden="true"></span>Competition</li>
+          <li><span class="pastille-finale" aria-hidden="true"></span>Finals</li>
+          <li><span class="pastille-ceremonie" aria-hidden="true"></span>Ceremony</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied" id="pied"></footer>
+
+  <script src="assets/sites-data.js"></script>
+  <script src="assets/programme-data.js"></script>
+  <script src="assets/commun.js"></script>
+  <script src="assets/programme.js"></script>
+</body>
+</html>

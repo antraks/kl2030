@@ -8,6 +8,7 @@ Site statique (HTML, CSS, JavaScript), sans étape de build, prévu pour GitHub 
 
 - `index.html` : accueil, compte à rebours, histoire, sports, pôles, mascotte
 - `sites.html` : les 16 sites de compétition, avec carte et filtres
+- `schedule.html` : programme des 12 jours, vue jour par jour et grille sports × jours
 - `food.html` : se restaurer pendant les Jeux, stands officiels filtrables, villages gourmands, plats à goûter, adresses en ville
 - `accommodation.html` : où loger, dix quartiers filtrables par pôle et budget avec carte, types d'hébergement, arrivée depuis l'aéroport
 - `visitor-info.html` : infos pratiques, entrée en Malaisie, météo et santé, règles des sites, accessibilité, transports, FAQ

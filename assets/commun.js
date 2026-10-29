@@ -4,7 +4,7 @@
   const liens = [
     { id: "accueil", href: "index.html", texte: "Home" },
     { id: "sites", href: "sites.html", texte: "Venues" },
-    { id: "programme", texte: "Schedule" },
+    { id: "programme", href: "schedule.html", texte: "Schedule" },
     { id: "hebergement", href: "accommodation.html", texte: "Accommodation" },
     { id: "restauration", href: "food.html", texte: "Food" },
     { id: "infos", href: "visitor-info.html", texte: "Visitor info" },

@@ -439,6 +439,83 @@ p { margin: 0 0 1em; max-width: 68ch; }
 .faq details[open] summary::after { content: "–"; }
 .faq details p { color: var(--dakwat-2); margin: 0 0 20px; }
 
+/* ---------- Page programme ---------- */
+
+.choix-jours { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 6px; }
+.jour-bouton {
+  font: inherit; color: var(--dakwat); cursor: pointer; flex: 1 0 64px;
+  display: flex; flex-direction: column; align-items: center; line-height: 1.2;
+  padding: 10px 6px; border-radius: 12px; border: 1px solid var(--trait); background: var(--blanc);
+}
+.jour-bouton span { font-size: 0.8rem; color: var(--dakwat-2); }
+.jour-bouton strong { font-family: var(--display); font-size: 1.6rem; font-weight: 800; font-variation-settings: "wdth" 80; }
+.jour-bouton:hover { border-color: var(--songket); }
+.jour-bouton[aria-pressed="true"] { background: var(--songket); border-color: var(--songket); color: var(--emas); }
+.jour-bouton[aria-pressed="true"] span { color: rgba(255, 255, 255, 0.8); }
+
+.jour-vue {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: clamp(24px, 4vw, 56px); margin-top: 32px; align-items: start;
+}
+.jour-date {
+  font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.05;
+  font-variation-settings: "wdth" 110; color: var(--songket); margin-bottom: 6px;
+}
+.jour-numero { color: var(--bunga); font-weight: 700; margin-bottom: 18px; }
+.jour-fort { font-size: 1.15rem; }
+.jour-compte { color: var(--dakwat-2); }
+.jour-sports { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--trait); }
+.jour-sports li {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px;
+  padding: 12px 0; border-bottom: 1px solid var(--trait);
+}
+.jour-sports a { font-weight: 700; color: var(--songket); text-decoration-color: var(--emas); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.jour-sports span { grid-column: 1; color: var(--dakwat-2); font-size: 0.95rem; }
+.jour-sports em {
+  grid-column: 2; grid-row: 1 / span 2; align-self: center; font-style: normal;
+  font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+  background: rgba(232, 181, 58, 0.22); color: var(--emas-texte);
+}
+.jour-sports .jour-ceremonie { background: var(--songket); border-radius: 10px; border: 0; padding: 14px 16px; margin: 8px 0; }
+.jour-ceremonie strong { color: var(--emas); font-family: var(--display); font-size: 1.15rem; }
+.jour-sports .jour-ceremonie span { color: rgba(255, 255, 255, 0.8); }
+
+.grille-cadre { overflow-x: auto; border: 1px solid var(--trait); border-radius: 12px; background: var(--blanc); }
+.grille { border-collapse: collapse; width: 100%; min-width: 780px; font-size: 0.95rem; }
+.grille th, .grille td { border-bottom: 1px solid var(--trait); text-align: center; padding: 0; height: 40px; }
+.grille tbody tr:last-child > * { border-bottom: 0; }
+.grille .mois th, .grille .mois td { border-bottom: 0; height: auto; }
+.grille .mois th {
+  text-align: left; padding: 12px 8px 0; font-family: var(--display); font-weight: 700; color: var(--songket);
+  border-left: 1px solid var(--trait);
+}
+.grille thead th { font-weight: 400; }
+.grille thead button {
+  font: inherit; font-size: 0.8rem; color: var(--dakwat-2); background: none; border: 0; cursor: pointer;
+  width: 100%; padding: 6px 2px 8px; display: flex; flex-direction: column; align-items: center; line-height: 1.2;
+}
+.grille thead button strong { font-family: var(--display); font-size: 1.15rem; color: var(--dakwat); }
+.grille thead button:hover strong { color: var(--bunga); }
+.grille th[scope="row"] {
+  position: sticky; left: 0; z-index: 1; background: var(--blanc);
+  text-align: left; padding: 8px 16px; white-space: nowrap; font-weight: 700;
+}
+.grille th[scope="row"] a { text-decoration: none; }
+.grille th[scope="row"] a:hover { text-decoration: underline; text-decoration-color: var(--emas); }
+.grille th[scope="row"] small { font-weight: 400; color: var(--dakwat-2); margin-left: 6px; }
+.grille .ligne-ceremonies th { color: var(--bunga); }
+.grille .choisi { background: rgba(232, 181, 58, 0.18); }
+
+.pastille-seance::before, .pastille-finale::before, .pastille-ceremonie::before {
+  content: ""; display: inline-block; vertical-align: middle;
+}
+.pastille-seance::before { width: 10px; height: 10px; border-radius: 50%; background: var(--hutan); }
+.pastille-finale::before { width: 18px; height: 18px; border-radius: 50%; background: var(--emas); box-shadow: inset 0 0 0 2px var(--emas-texte); }
+.pastille-ceremonie::before { width: 14px; height: 14px; background: var(--bunga); transform: rotate(45deg); }
+.legende { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; margin: 16px 0 0; padding: 0; color: var(--dakwat-2); font-size: 0.95rem; }
+.legende li { display: flex; align-items: center; gap: 10px; }
+.legende span { display: inline-flex; width: 18px; justify-content: center; }
+
 /* ---------- Mobile ---------- */
 
 @media (max-width: 900px) {
@@ -460,6 +537,7 @@ p { margin: 0 0 1em; max-width: 68ch; }
   .bandeau-vert .conteneur { grid-template-columns: 1fr; }
   .quartiers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .conseils, .regles { grid-template-columns: 1fr; }
+  .jour-vue { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .essentiel, .quartiers, .mots { grid-template-columns: 1fr; }
