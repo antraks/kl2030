@@ -8,8 +8,9 @@ Site statique (HTML, CSS, JavaScript), sans étape de build, prévu pour GitHub 
 
 - `index.html` : accueil, compte à rebours, histoire, sports, pôles, mascotte
 - `sites.html` : les 16 sites de compétition, avec carte et filtres
+- `restauration.html` : se restaurer pendant les Jeux, stands officiels filtrables, villages gourmands, plats à goûter, adresses en ville
 
-Les données des sites sont dans `assets/sites-data.js`.
+Les données des sites sont dans `assets/sites-data.js`, celles des stands dans `assets/restauration-data.js`.
 
 ## Voir le site en local
 

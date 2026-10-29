@@ -6,7 +6,7 @@
     { id: "sites", href: "sites.html", texte: "Sites" },
     { id: "programme", texte: "Programme" },
     { id: "hebergement", texte: "Hébergement" },
-    { id: "restauration", texte: "Restauration" },
+    { id: "restauration", href: "restauration.html", texte: "Restauration" },
     { id: "infos", texte: "Infos pratiques" },
   ];
 

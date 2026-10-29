@@ -37,6 +37,12 @@
 
   // ---------- Fiches ----------
 
+  function stands(s) {
+    const liens = (window.STANDS || []).filter((st) => st.site === s.id)
+      .map((st) => `<a href="restauration.html#stand-${st.id}">${st.nom}</a>`);
+    return liens.length ? `<dt>Manger</dt><dd>${liens.join(", ")}</dd>` : "";
+  }
+
   liste.innerHTML = SITES.map((s) => `
     <li class="fiche" id="site-${s.id}" style="--couleur-pole:${POLES[s.pole].couleur}">
       <h3>${s.nom}</h3>
@@ -48,6 +54,7 @@
         <dt>Capacité</dt><dd>${s.capacite}</dd>
         <dt>Accès</dt><dd>${s.acces}</dd>
         <dt>Pôle</dt><dd>${POLES[s.pole].nom}</dd>
+        ${stands(s)}
       </dl>
       <button type="button" class="voir-carte" data-id="${s.id}">Voir sur la carte</button>
     </li>`).join("") + `<li class="vide" id="vide" hidden>Aucun site ne correspond à ces filtres. Choisissez un autre pôle ou « Tous les sports ».</li>`;
