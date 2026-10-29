@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accommodation — Kuala Lumpur 2030 (fictional site)</title>
+  <meta name="description" content="Where to stay during the Kuala Lumpur 2030 Commonwealth Games (fictional site): neighbourhoods near each venue, prices, types of accommodation and arriving from the airport.">
+  <link rel="icon" href="assets/embleme.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="hebergement">
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <section class="page-tete">
+      <div class="conteneur">
+        <h1>Where to stay</h1>
+        <p>From hostels in Chinatown to serviced apartments in Mont Kiara, Kuala Lumpur has a bed for every budget. Here is where to stay to be close to your events, and how to get around from there.</p>
+        <nav class="actions" aria-label="On this page">
+          <a class="bouton bouton-or" href="#quartiers">Neighbourhoods</a>
+          <a class="bouton bouton-contour" href="#types">Types of accommodation</a>
+          <a class="bouton bouton-contour" href="#arriver">Arriving</a>
+        </nav>
+      </div>
+    </section>
+    <div class="bande-rebung" aria-hidden="true"></div>
+
+    <section class="section" id="essentiel">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>The essentials</h2>
+          <p>Six things to know before you book.</p>
+        </div>
+        <div class="essentiel">
+          <div class="essentiel-fort">
+            <p class="essentiel-chiffre">35,000</p>
+            <h3>Partner rooms</h3>
+            <p>Partner hotels have frozen their rates at 2029 prices for the whole of the Games. Look for the KL 2030 label when you book.</p>
+          </div>
+          <div>
+            <h3>Book early</h3>
+            <p>Hotels within walking distance of Bukit Jalil are expected to be full by spring 2030. The city centre has far more choice.</p>
+          </div>
+          <div>
+            <h3>Stay near a station</h3>
+            <p>Pick a place within ten minutes' walk of an LRT, MRT or Monorail station: the roads around the venues are jammed on finals nights.</p>
+          </div>
+          <div>
+            <h3>Your ticket is a travel pass</h3>
+            <p>On the day of your event, your ticket gives free travel on the LRT, MRT, Monorail and Games shuttles.</p>
+          </div>
+          <div>
+            <h3>Registered holiday lets only</h3>
+            <p>Holiday rentals must display a city registration number. No number, no booking: it protects you from scams.</p>
+          </div>
+          <div>
+            <h3>Accessible rooms</h3>
+            <p>Partner hotels list their step-free rooms, and the official booking platform lets you filter for them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quartiers">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Ten neighbourhoods</h2>
+          <p>Choose a hub to see where to stay near its venues. Diamonds on the map are neighbourhoods, dots are venues.</p>
+        </div>
+        <div class="filtres">
+          <fieldset>
+            <legend>Near</legend>
+            <div id="filtre-poles" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+          </fieldset>
+          <div class="filtres-bloc">
+            <label for="filtre-budget">Budget per night
+              <select id="filtre-budget">
+                <option value="">Any budget</option>
+                <option value="petit">Under RM 200</option>
+                <option value="moyen">RM 200–500</option>
+                <option value="luxe">Over RM 500</option>
+              </select>
+            </label>
+          </div>
+          <p class="resultat" id="resultat" aria-live="polite"></p>
+        </div>
+
+        <div class="sites-corps">
+          <ul class="liste-sites" id="liste-quartiers"></ul>
+          <div class="carte-cadre">
+            <div id="carte" role="region" aria-label="Map of neighbourhoods and competition venues"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="types" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Types of accommodation</h2>
+          <p>Indicative prices per night during the Games.</p>
+        </div>
+        <ul class="plats">
+          <li>
+            <h3>Hotels</h3>
+            <p>From international chains around KLCC to small boutique hotels in Chinatown shophouses. Breakfast is often a buffet of nasi lemak, roti and noodles.</p>
+            <p class="stand-prix">RM 120–1,500</p>
+          </li>
+          <li>
+            <h3>Serviced apartments</h3>
+            <p>A Kuala Lumpur speciality: flats with a kitchen, a washing machine and often a rooftop pool, rented by the night. Ideal for families and groups.</p>
+            <p class="stand-prix">RM 200–600</p>
+          </li>
+          <li>
+            <h3>Homestays and holiday lets</h3>
+            <p>Registered rooms and houses, from the wooden houses of Kampung Baru to suburban terraced homes. A good way to meet local families.</p>
+            <p class="stand-prix">RM 100–400</p>
+          </li>
+          <li>
+            <h3>Hostels and capsule hotels</h3>
+            <p>Dorm beds and sleeping capsules, mostly in Chinatown and Bukit Bintang. Many have rooftop bars and organise group outings to the events.</p>
+            <p class="stand-prix">RM 40–150</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section bandeau-vert" id="arriver">
+      <div class="conteneur">
+        <div>
+          <h2>Arriving in Kuala Lumpur</h2>
+          <p><strong>By train:</strong> the KLIA Ekspres takes you non-stop from both airport terminals to KL Sentral in 28 minutes. The KLIA Transit makes the same trip with stops, including Putrajaya.</p>
+          <p><strong>By road:</strong> allow about an hour by taxi or ride-hailing app to the city centre, more in the evening rush hour.</p>
+          <p><strong>Welcome desks:</strong> KL 2030 desks in the arrivals halls hand out transport maps and help you reach your accommodation, from 6 am to midnight throughout the Games.</p>
+        </div>
+        <div>
+          <h3>Good to know</h3>
+          <dl class="mots">
+            <div><dt>Plugs</dt><dd>Type G (three-pin, as in the UK), 240 V</dd></div>
+            <div><dt>Check-in</dt><dd>Usually from 3 pm, check-out at noon</dd></div>
+            <div><dt>Tourism tax</dt><dd>RM 10 per room per night for foreign visitors</dd></div>
+            <div><dt>Tipping</dt><dd>Not expected; service is often included</dd></div>
+            <div><dt>Air-con</dt><dd>Everywhere and often icy: pack a light jumper</dd></div>
+            <div><dt>Shoes</dt><dd>Take them off when entering a homestay</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied" id="pied"></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/sites-data.js"></script>
+  <script src="assets/hebergement-data.js"></script>
+  <script src="assets/commun.js"></script>
+  <script src="assets/hebergement.js"></script>
+</body>
+</html>

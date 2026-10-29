@@ -5,7 +5,7 @@
     { id: "accueil", href: "index.html", texte: "Home" },
     { id: "sites", href: "sites.html", texte: "Venues" },
     { id: "programme", texte: "Schedule" },
-    { id: "hebergement", texte: "Accommodation" },
+    { id: "hebergement", href: "accommodation.html", texte: "Accommodation" },
     { id: "restauration", href: "food.html", texte: "Food" },
     { id: "infos", texte: "Visitor info" },
   ];
