@@ -7,7 +7,7 @@
     { id: "programme", texte: "Schedule" },
     { id: "hebergement", href: "accommodation.html", texte: "Accommodation" },
     { id: "restauration", href: "food.html", texte: "Food" },
-    { id: "infos", texte: "Visitor info" },
+    { id: "infos", href: "visitor-info.html", texte: "Visitor info" },
   ];
 
   const nav = liens
