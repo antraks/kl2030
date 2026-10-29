@@ -13,13 +13,13 @@
 
   // ---------- Filtres ----------
 
-  const boutonsPoles = [["tous", { nom: "Tous" }], ...Object.entries(POLES)];
+  const boutonsPoles = [["tous", { nom: "All" }], ...Object.entries(POLES)];
   zonePoles.innerHTML = boutonsPoles
     .map(([id, p]) =>
       `<button type="button" class="puce" data-pole="${id}" style="--couleur-pole:${p.couleur || "transparent"}">${p.nom}</button>`)
     .join("");
 
-  const sports = [...new Set(SITES.flatMap((s) => s.sports))].sort((a, b) => a.localeCompare(b, "fr"));
+  const sports = [...new Set(SITES.flatMap((s) => s.sports))].sort((a, b) => a.localeCompare(b, "en"));
   selectSport.insertAdjacentHTML("beforeend", sports.map((s) => `<option value="${s}">${s}</option>`).join(""));
   if (!sports.includes(etat.sport)) etat.sport = "";
   selectSport.value = etat.sport;
@@ -39,8 +39,8 @@
 
   function stands(s) {
     const liens = (window.STANDS || []).filter((st) => st.site === s.id)
-      .map((st) => `<a href="restauration.html#stand-${st.id}">${st.nom}</a>`);
-    return liens.length ? `<dt>Manger</dt><dd>${liens.join(", ")}</dd>` : "";
+      .map((st) => `<a href="food.html#stand-${st.id}">${st.nom}</a>`);
+    return liens.length ? `<dt>Food</dt><dd>${liens.join(", ")}</dd>` : "";
   }
 
   liste.innerHTML = SITES.map((s) => `
@@ -50,14 +50,14 @@
       <ul class="fiche-sports">${s.sports.map((sp) => `<li>${sp}</li>`).join("")}</ul>
       <p>${s.description}</p>
       <dl>
-        <dt>Épreuves</dt><dd>${s.programme}</dd>
-        <dt>Capacité</dt><dd>${s.capacite}</dd>
-        <dt>Accès</dt><dd>${s.acces}</dd>
-        <dt>Pôle</dt><dd>${POLES[s.pole].nom}</dd>
+        <dt>Events</dt><dd>${s.programme}</dd>
+        <dt>Capacity</dt><dd>${s.capacite}</dd>
+        <dt>Getting there</dt><dd>${s.acces}</dd>
+        <dt>Hub</dt><dd>${POLES[s.pole].nom}</dd>
         ${stands(s)}
       </dl>
-      <button type="button" class="voir-carte" data-id="${s.id}">Voir sur la carte</button>
-    </li>`).join("") + `<li class="vide" id="vide" hidden>Aucun site ne correspond à ces filtres. Choisissez un autre pôle ou « Tous les sports ».</li>`;
+      <button type="button" class="voir-carte" data-id="${s.id}">Show on map</button>
+    </li>`).join("") + `<li class="vide" id="vide" hidden>No venue matches these filters. Choose another hub or “All sports”.</li>`;
 
   // ---------- Carte ----------
 
@@ -76,7 +76,7 @@
       iconAnchor: [11, 11],
     });
     const m = L.marker(s.coords, { icon: icone, title: s.nom, alt: s.nom });
-    m.bindPopup(`<strong>${s.nom}</strong>${s.sports.join(", ")}<br><button type="button" data-fiche="${s.id}">Lire la fiche</button>`);
+    m.bindPopup(`<strong>${s.nom}</strong>${s.sports.join(", ")}<br><button type="button" data-fiche="${s.id}">Read more</button>`);
     reperes[s.id] = m;
   });
 
@@ -121,7 +121,7 @@
       else reperes[s.id].remove();
     });
     document.getElementById("vide").hidden = visibles.length > 0;
-    resultat.textContent = visibles.length > 1 ? `${visibles.length} sites affichés` : `${visibles.length} site affiché`;
+    resultat.textContent = visibles.length !== 1 ? `${visibles.length} venues shown` : `${visibles.length} venue shown`;
 
     if (visibles.length === 1) carte.setView(visibles[0].coords, 14);
     else if (visibles.length > 1) carte.fitBounds(visibles.map((s) => s.coords), { padding: [30, 30] });

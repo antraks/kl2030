@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food — Kuala Lumpur 2030 (fictional site)</title>
+  <meta name="description" content="Eating at the Kuala Lumpur 2030 Commonwealth Games (fictional site): official food stalls, food villages, dishes to try and places to eat in town.">
+  <link rel="icon" href="assets/embleme.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="restauration">
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <section class="page-tete">
+      <div class="conteneur">
+        <h1>Food &amp; drink</h1>
+        <p>In Kuala Lumpur, people eat at any hour, outdoors and for a few ringgit. Malay, Chinese and Indian cooking meet on every street corner. Here is how to make the most of it during the Games, at the venues and in town.</p>
+        <nav class="actions" aria-label="On this page">
+          <a class="bouton bouton-or" href="#stands">Official food stalls</a>
+          <a class="bouton bouton-contour" href="#plats">Dishes to try</a>
+          <a class="bouton bouton-contour" href="#en-ville">Eating in town</a>
+        </nav>
+      </div>
+    </section>
+    <div class="bande-rebung" aria-hidden="true"></div>
+
+    <section class="section" id="essentiel">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>The essentials</h2>
+          <p>What to know before you enter a venue.</p>
+        </div>
+        <div class="essentiel">
+          <div class="essentiel-fort">
+            <p class="essentiel-chiffre">RM 12</p>
+            <h3>The Rimau plate</h3>
+            <p>Every official stall offers a dish and a drink for 12 ringgit, at the same price at every venue.</p>
+          </div>
+          <div>
+            <h3>Water is free</h3>
+            <p>Fountains at every entrance and in every stand. Bring an empty bottle: afternoons are well above 30 °C.</p>
+          </div>
+          <div>
+            <h3>Bringing your own food</h3>
+            <p>Allowed, in a closed container and for your own consumption. Glass and alcohol are not allowed.</p>
+          </div>
+          <div>
+            <h3>Cashless venues</h3>
+            <p>Stalls take bank cards and mobile payment. Stalls in the food villages also accept cash.</p>
+          </div>
+          <div>
+            <h3>Everything is halal</h3>
+            <p>All official stalls are halal-certified. No alcohol is sold at the venues.</p>
+          </div>
+          <div>
+            <h3>Reusable tableware</h3>
+            <p>Plates, bowls and cups are reusable, with an RM 2 deposit. Return them to any stall.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="villages" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Three food villages</h2>
+          <p>One large food area per hub, open every day of the Games.</p>
+        </div>
+        <div class="poles">
+          <div class="pole" style="--couleur-pole:#D42A45">
+            <h3>Pasar Rimau</h3>
+            <p class="pole-nombre">Bukit Jalil · 10 am – midnight · free entry</p>
+            <p>The Games' night market, on the concourse between the National Stadium and Axiata Arena. Forty stalls, shaded tables and giant screens to follow the finals.</p>
+          </div>
+          <div class="pole" style="--couleur-pole:#B8860B">
+            <h3>Commonwealth Street</h3>
+            <p class="pole-nombre">City centre · 11 am – 11 pm · free entry</p>
+            <p>In KLCC Park, six nations in the spotlight every day: the 74 cuisines of the Commonwealth in twelve days, from New Zealand meat pies to Jamaican jerk chicken.</p>
+          </div>
+          <div class="pole" style="--couleur-pole:#0F5B4E">
+            <h3>Medan Selera MITEC</h3>
+            <p class="pole-nombre">Greater KL · with a MITEC ticket</p>
+            <p>The food court shared by weightlifting, wrestling and judo. The more distant venues each have their own stall, and the shuttle departure stations have kiosks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stands" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Official food stalls</h2>
+          <p>At least one stall per venue. They open with the gates and close 30 minutes after the last event.</p>
+        </div>
+        <div class="filtres">
+          <fieldset>
+            <legend>Hub</legend>
+            <div id="filtre-poles" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+          </fieldset>
+          <div class="filtres-bloc">
+            <label for="filtre-regime">Diet
+              <select id="filtre-regime">
+                <option value="">All stalls</option>
+                <option value="vegetarien">Vegetarian options</option>
+                <option value="vegan">Vegan options</option>
+              </select>
+            </label>
+          </div>
+          <label class="case" for="filtre-arachides">
+            <input type="checkbox" id="filtre-arachides"> Peanut-free
+          </label>
+          <p class="resultat" id="resultat" aria-live="polite"></p>
+        </div>
+        <ul class="liste-stands" id="liste-stands"></ul>
+      </div>
+    </section>
+
+    <section class="section" id="plats" style="padding-top:0">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Dishes to try</h2>
+          <p>Ten classics you will find at the venues and on the street.</p>
+        </div>
+        <ul class="plats">
+          <li>
+            <h3 lang="ms">Nasi lemak</h3>
+            <p>Rice cooked in coconut milk and pandan, with sambal, fried anchovies, peanuts and egg. The national dish, eaten at breakfast as well as at midnight.</p>
+            <ul class="badges"><li class="badge-rouge">Spicy</li><li class="badge-or">Peanuts</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Roti canai</h3>
+            <p>Flaky flatbread cooked on a griddle and dipped in dhal or curry. Roti telur is the version with egg.</p>
+            <ul class="badges"><li class="badge-vert">Vegetarian</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Satay</h3>
+            <p>Skewers marinated in turmeric, grilled over charcoal and served with peanut sauce and cubes of pressed rice.</p>
+            <ul class="badges"><li class="badge-or">Peanuts</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Char kway teow</h3>
+            <p>Flat rice noodles stir-fried in a very hot wok with prawns, cockles, bean sprouts and chives.</p>
+          </li>
+          <li>
+            <h3 lang="ms">Laksa</h3>
+            <p>Noodle soup. In Kuala Lumpur it comes with curry and coconut milk; in Penang it is sour, made with fish and tamarind.</p>
+            <ul class="badges"><li class="badge-rouge">Spicy</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Rendang</h3>
+            <p>Beef simmered for hours in coconut milk and spices, until the sauce is almost dry.</p>
+            <ul class="badges"><li class="badge-rouge">Spicy</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Nasi kandar</h3>
+            <p>Rice topped with several curries mixed together, the speciality of mamak restaurants, run by Indian Muslim families.</p>
+            <ul class="badges"><li class="badge-rouge">Spicy</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Teh tarik</h3>
+            <p>“Pulled” milk tea: poured from a height, from one jug to another, until it froths.</p>
+            <ul class="badges"><li class="badge-vert">Vegetarian</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Cendol</h3>
+            <p>Shaved ice, coconut milk, palm sugar and little green pandan jelly noodles. The best cure for the heat.</p>
+            <ul class="badges"><li class="badge-vert">Vegan</li></ul>
+          </li>
+          <li>
+            <h3 lang="ms">Kuih</h3>
+            <p>Colourful little cakes made with glutinous rice, coconut and pandan, sold by the piece. Take several to share.</p>
+            <ul class="badges"><li class="badge-vert">Vegetarian</li></ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section bandeau-vert" id="regimes">
+      <div class="conteneur">
+        <div>
+          <h2>Diets and allergies</h2>
+          <p><strong>Vegetarian:</strong> easy, especially in South Indian cooking. Banana leaf rice and roti canai with dhal contain no meat.</p>
+          <p><strong>Gluten-free:</strong> harder. Soy sauce and wheat noodles are everywhere; go for rice and rice noodles.</p>
+          <p><strong>Peanuts:</strong> they are everywhere, in nasi lemak, satay and rojak. On this page, stalls that serve them are marked. If you have a severe allergy, say so clearly at the stall and carry your medication.</p>
+        </div>
+        <div>
+          <h3>A few useful words</h3>
+          <dl class="mots">
+            <div><dt lang="ms">Tak pedas</dt><dd>Not spicy</dd></div>
+            <div><dt lang="ms">Kurang manis</dt><dd>Less sweet</dd></div>
+            <div><dt lang="ms">Tanpa kacang</dt><dd>Without peanuts</dd></div>
+            <div><dt lang="ms">Sayur sahaja</dt><dd>Vegetables only</dd></div>
+            <div><dt lang="ms">Air kosong</dt><dd>Plain water</dd></div>
+            <div><dt lang="ms">Makan sini</dt><dd>To eat in</dd></div>
+            <div><dt lang="ms">Bungkus</dt><dd>To take away</dd></div>
+            <div><dt lang="ms">Terima kasih</dt><dd>Thank you</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="en-ville">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2>Eating in town</h2>
+          <p>After the evening sessions, four neighbourhoods where the stalls stay open late.</p>
+        </div>
+        <ul class="quartiers">
+          <li>
+            <h3>Jalan Alor</h3>
+            <p class="fiche-local" lang="ms">Bukit Bintang</p>
+            <p>The street of grills and seafood, which comes alive at nightfall. Noisy, smoky, unmissable.</p>
+            <p class="quartier-acces">Monorail or MRT, Bukit Bintang station</p>
+          </li>
+          <li>
+            <h3>Petaling Street</h3>
+            <p class="fiche-local">Chinatown</p>
+            <p>Under the market's great glass roof, stalls selling noodles, roast duck and roasted chestnuts.</p>
+            <p class="quartier-acces">LRT or MRT, Pasar Seni station</p>
+          </li>
+          <li>
+            <h3>Brickfields</h3>
+            <p class="fiche-local">Little India</p>
+            <p>Banana leaf rice, dosas and Indian sweets, a stone's throw from KL Sentral. A paradise for vegetarians.</p>
+            <p class="quartier-acces">KL Sentral, then a 5-minute walk</p>
+          </li>
+          <li>
+            <h3>Kampung Baru</h3>
+            <p class="fiche-local">Malay village</p>
+            <p>Wooden houses at the foot of the Petronas Towers. Nasi lemak, satay and home cooking.</p>
+            <p class="quartier-acces">LRT Kelana Jaya Line, Kampung Baru station</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied" id="pied"></footer>
+
+  <script src="assets/sites-data.js"></script>
+  <script src="assets/restauration-data.js"></script>
+  <script src="assets/commun.js"></script>
+  <script src="assets/restauration.js"></script>
+</body>
+</html>

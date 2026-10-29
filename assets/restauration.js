@@ -11,7 +11,7 @@
 
   // ---------- Filtres ----------
 
-  const boutonsPoles = [["tous", { nom: "Tous" }], ...Object.entries(POLES)];
+  const boutonsPoles = [["tous", { nom: "All" }], ...Object.entries(POLES)];
   zonePoles.innerHTML = boutonsPoles
     .map(([id, p]) =>
       `<button type="button" class="puce" data-pole="${id}" style="--couleur-pole:${p.couleur || "transparent"}">${p.nom}</button>`)
@@ -36,10 +36,10 @@
 
   function badges(st) {
     const b = [];
-    if (st.regimes.includes("vegan")) b.push(`<li class="badge-vert">Options véganes</li>`);
-    else if (st.regimes.includes("vegetarien")) b.push(`<li class="badge-vert">Options végétariennes</li>`);
-    if (st.piquant) b.push(`<li class="badge-rouge">Piquant</li>`);
-    if (st.arachides) b.push(`<li class="badge-or">Arachides</li>`);
+    if (st.regimes.includes("vegan")) b.push(`<li class="badge-vert">Vegan options</li>`);
+    else if (st.regimes.includes("vegetarien")) b.push(`<li class="badge-vert">Vegetarian options</li>`);
+    if (st.piquant) b.push(`<li class="badge-rouge">Spicy</li>`);
+    if (st.arachides) b.push(`<li class="badge-or">Peanuts</li>`);
     return b.length ? `<ul class="badges">${b.join("")}</ul>` : "";
   }
 
@@ -53,7 +53,7 @@
         <p class="stand-prix">${st.prix}</p>
         ${badges(st)}
       </li>`;
-  }).join("") + `<li class="vide" id="vide" hidden>Aucun stand ne correspond à ces filtres. Choisissez un autre pôle ou « Tous les stands ».</li>`;
+  }).join("") + `<li class="vide" id="vide" hidden>No stall matches these filters. Choose another hub or “All stalls”.</li>`;
 
   // ---------- Application des filtres ----------
 
@@ -70,7 +70,7 @@
       document.getElementById(`stand-${st.id}`).hidden = !visibles.includes(st);
     });
     document.getElementById("vide").hidden = visibles.length > 0;
-    resultat.textContent = visibles.length > 1 ? `${visibles.length} stands affichés` : `${visibles.length} stand affiché`;
+    resultat.textContent = visibles.length !== 1 ? `${visibles.length} stalls shown` : `${visibles.length} stall shown`;
   }
 
   appliquer();
